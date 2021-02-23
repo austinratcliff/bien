@@ -1,20 +1,82 @@
 $green: #3bc8aa;
 $orange: #ff551a;
 $black: #1e1e1e;
+$yellow: #ffeccf;
 
 $titleFont: 'PT Serif';
 $bodyFont: 'Work Sans';
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   color: $black;
-  font-family: $bodyFont;
+  font-family: $bodyFont, sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  margin: 0;
 }
 
-h1 {
-  font-family: $titleFont;
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: $titleFont, serif;
 }
 
-h2 {
+header,
+main,
+footer {
+  padding: 20px 30px;
+}
+
+a {
   color: $green;
-  font-family: $titleFont;
+}
+
+header {
+  background: $yellow;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  h1 {
+    margin: 0;
+    img {
+      width: 80px;
+    }
+  }
+}
+
+main {
+  min-height: calc(100vh - 150px);
+}
+
+footer {
+  color: #999;
+  font-size: 14px;
+}
+
+label {
+  display: block;
+}
+
+input,
+textarea {
+  border: 1px solid #ccc;
+  font-family: inherit;
+  font-size: 18px;
+  min-width: 400px;
+  padding: 7px 10px;
+}
+
+input[type='submit'] {
+  background: $orange;
+  border-color: $orange;
+  color: white;
+}
+
+textarea {
+  min-height: 400px;
 }
