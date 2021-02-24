@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20_210_224_012_428) do
+ActiveRecord::Schema.define(version: 20_210_224_162_319) do
   create_table 'reviews', force: :cascade do |t|
     t.string 'title'
     t.text 'body'
@@ -22,5 +22,8 @@ ActiveRecord::Schema.define(version: 20_210_224_012_428) do
     t.datetime 'updated_at', precision: 6, null: false
     t.string 'phone_number'
     t.string 'ambiance'
+    t.text 'address'
+    t.float 'latitude'
+    t.float 'longitude'
   end
 end
