@@ -1,16 +1,17 @@
 <% content_for :page_title, "Reviews" %>
 
 <nav class="filters">
-  <%= link_to "All reviews", root_path %>
+  <%= active_link_to "All reviews", root_path, active: { price: nil, cuisine: nil, location: nil } %>
 
   <div>
-    <%= link_to "$", root_path(price: 1, cuisine: @cuisine, location: @location) %>
-    <%= link_to "$$", root_path(price: 2, cuisine: @cuisine, location: @location) %>
-    <%= link_to "$$$", root_path(price: 3, cuisine: @cuisine, location: @location) %>
+    <%= active_link_to "$", root_path(price: 1, cuisine: @cuisine, location: @location), active: { price: 1 } %>
+    <%= active_link_to "$$", root_path(price: 2, cuisine: @cuisine, location: @location), active: { price: 2 } %>
+    <%= active_link_to "$$$", root_path(price: 3, cuisine: @cuisine, location: @location), active: { price: 3 } %>
   </div>
 
   <div>
-    <%= link_to "Italian", root_path(cuisine: "Italian", price: @price, location: @location) %>
+    <%= active_link_to "Italian", root_path(cuisine: "Italian", price: @price, location: @location), active: { cuisine: "Italian" } %>
+    <%= active_link_to "Vegetarian", root_path(cuisine: "Vegetarian", price: @price, location: @location), active: { cuisine: "Vegetarian" } %>
   </div>
 
   <form action="/">
