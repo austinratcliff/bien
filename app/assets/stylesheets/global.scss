@@ -106,3 +106,12 @@ nav.filters {
     padding: 4px 5px;
   }
 }
+
+.comment {
+  border-bottom: 2px solid $yellow;
+  font-size: 14px;
+  p.posted {
+    color: #999;
+    font-size: 12px;
+  }
+}
